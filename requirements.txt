@@ -4,3 +4,5 @@ sklearn
 pickle
 ipykernel
 tensorflow
+xgboost
+imblearn
