@@ -1,7 +1,8 @@
 from huggingface_hub import HfApi
+import os
 
 # Replace with your actual token
-api_token = "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"
+api_token = os.getenv('HUGGINGFACE_API_TOKEN')
 
 # Initialize the Hugging Face API
 api = HfApi()
