@@ -2,7 +2,7 @@ import os
 from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint
 
 # Set Hugging Face API Token
-os.environ['HUGGINGFACE_API_TOKEN'] = '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'  # Use your actual token
+hf_token = os.getenv('HUGGINGFACE_API_TOKEN')  # Use your actual token
 
 # Create Hugging Face Endpoint
 hf_endpoint = HuggingFaceEndpoint(
@@ -13,7 +13,7 @@ hf_endpoint = HuggingFaceEndpoint(
     do_sample=True,  # Enable sampling to use temperature
     repetition_penalty=1.03,
     temperature=0.7,
-    huggingfacehub_api_token='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'
+    huggingfacehub_api_token=hf_token
 )
 
 # Initialize the ChatHuggingFace model
